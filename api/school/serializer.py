@@ -57,7 +57,7 @@ class SocialActivitySerializer(serializers.ModelSerializer):
 class DiscountItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiscountItem
-        fields = ['id','description','percentage','icon']
+        fields = ['id','description','percentage','image']
 
 
 class ContactSerializer(serializers.Serializer):
@@ -113,7 +113,7 @@ class AdviseSerializer(serializers.ModelSerializer):
     rightside = MainTextSerializer()
     class Meta:
         model = Advise
-        fields = ['id','title','description','imagecenter','leftside','rightside']
+        fields = ['id','title','description','image','leftside','rightside']
 
 class MainSerializer(serializers.ModelSerializer):
     class Meta:
