@@ -10,6 +10,7 @@ from school.models import (
     Main,
     MainText,
     Advise,
+    News
 
 )
 # Register your models here.
@@ -24,3 +25,4 @@ admin.site.register(Contact)
 admin.site.register(Main)
 admin.site.register(MainText)
 admin.site.register(Advise)
+admin.site.register(News)

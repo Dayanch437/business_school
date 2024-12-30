@@ -4,10 +4,25 @@ from rest_framework.viewsets import  ModelViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import status
+from rest_framework.renderers import JSONRenderer
+
+
 
 from school.models import (
-    Banner, Teacher, Course, ActivityImage, SocialActivity, DiscountItem, Videos,Contact,Advise,MainText,Main
+    Banner,
+    Teacher,
+    Course,
+    ActivityImage,
+    SocialActivity,
+    DiscountItem,
+    Videos,
+    Contact,
+    Advise,
+    MainText,
+    Main,
+    News
 )
+
 
 from .serializer import (
     BannerSerializer,
@@ -20,7 +35,8 @@ from .serializer import (
     ContactVerificationSerializer,
     MainTextSerializer,
     AdviseSerializer,
-    MainSerializer
+    MainSerializer,
+    NewsSerializer
 
 )
 
@@ -177,12 +193,13 @@ class MainViewSet(ModelViewSet):
 
 @extend_schema(
     tags=["Advise"],
-    summary="Advise",
-    responses= AdviseSerializer,
+    summary="Retrieve all Advises as separate dictionary responses",
+    responses=AdviseSerializer,  # Define single object schema
 )
 class AdviseViewSet(ModelViewSet):
     queryset = Advise.objects.all()
     serializer_class = AdviseSerializer
+
 
 @extend_schema(
     tags=["MainText"],
@@ -192,3 +209,13 @@ class AdviseViewSet(ModelViewSet):
 class MainTextViewSet(ModelViewSet):
     queryset = MainText.objects.all()
     serializer_class = MainTextSerializer
+
+
+@extend_schema(
+     tags=["News"],
+    summary="News",
+    responses=NewsSerializer
+)
+class NewsViewSet(ModelViewSet):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer

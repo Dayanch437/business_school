@@ -15,8 +15,8 @@ from school.models import (
     ActivityImage,
     DiscountItem,
     Main,
-    Advise,
-    MainText
+    MainText,
+    Advise, News
 )
 
 
@@ -24,7 +24,8 @@ from school.models import (
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banner
-        fields = ['id','title','image']
+        fields = ['id','title','image',"description"]
+
 
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
@@ -113,9 +114,15 @@ class AdviseSerializer(serializers.ModelSerializer):
     rightside = MainTextSerializer()
     class Meta:
         model = Advise
-        fields = ['id','title','description','image','leftside','rightside']
+        fields = ['id','title','image','description','leftside','rightside']
 
 class MainSerializer(serializers.ModelSerializer):
     class Meta:
         model = Main
         fields = ['id','title','image','description']
+
+
+class NewsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = News
+        fields = ['id','title','image','description','date']

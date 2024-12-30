@@ -6,10 +6,13 @@ from util.validator import validate_video_extension,validate_email
 class Banner(BaseImageModel):
     image = models.ImageField(upload_to='banners/')
     title = models.CharField(max_length=100)
+    description = models.TextField()
     class Meta:
         verbose_name = 'banner'
         verbose_name_plural = 'banners'
         db_table = 'banner'
+
+
 
 
 class Teacher(BaseImageModel):
@@ -142,3 +145,17 @@ class Advise(BaseImageModel):
 
     def __str__(self):
        return self.title
+
+
+class News(BaseImageModel):
+    title = models.CharField(max_length=400)
+    description = models.TextField()
+    date = models.DateField()
+
+    class Meta:
+        verbose_name = 'news'
+        verbose_name_plural = 'news'
+        db_table = 'news'
+
+    def __str__(self):
+        return self.title

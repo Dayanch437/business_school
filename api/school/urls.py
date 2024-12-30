@@ -1,5 +1,5 @@
-from django.urls import path
 from rest_framework.routers import DefaultRouter
+
 from .viewsets import (
     BannerViewSet,
     TeacherViewSet,
@@ -8,9 +8,9 @@ from .viewsets import (
     SocialActivityViewSet,
     DiscountItemViewSet,
     ContactViewSet,
-    Main,
-    AdviseViewSet, MainViewSet,
-
+    AdviseViewSet,
+    MainViewSet,
+    NewsViewSet
 )
 
 
@@ -24,12 +24,8 @@ router.register('video', VideoViewSet)
 router.register('social_activity', SocialActivityViewSet)
 router.register('discount_item', DiscountItemViewSet)
 router.register('contacts', ContactViewSet)
-
+router.register('news', NewsViewSet)
 router.register('main', MainViewSet,basename='main')
 router.register('advise', AdviseViewSet,basename='advise')
-
-
-
-
 
 urlpatterns += router.urls
