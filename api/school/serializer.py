@@ -15,8 +15,7 @@ from school.models import (
     ActivityImage,
     DiscountItem,
     Main,
-    MainText,
-    Advise, News
+    News
 )
 
 
@@ -103,18 +102,6 @@ class ContactVerificationSerializer(serializers.Serializer):
     gmail = serializers.EmailField()
     verification_code = serializers.CharField(max_length=6)
 
-class MainTextSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MainText
-        fields = ['id','title','description']
-
-
-class AdviseSerializer(serializers.ModelSerializer):
-    leftside = MainTextSerializer()
-    rightside = MainTextSerializer()
-    class Meta:
-        model = Advise
-        fields = ['id','title','image','description','leftside','rightside']
 
 class MainSerializer(serializers.ModelSerializer):
     class Meta:

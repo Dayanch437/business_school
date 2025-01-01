@@ -17,8 +17,6 @@ from school.models import (
     DiscountItem,
     Videos,
     Contact,
-    Advise,
-    MainText,
     Main,
     News
 )
@@ -33,8 +31,6 @@ from .serializer import (
     DiscountItemSerializer,
     ContactSerializer,
     ContactVerificationSerializer,
-    MainTextSerializer,
-    AdviseSerializer,
     MainSerializer,
     NewsSerializer
 
@@ -191,24 +187,6 @@ class MainViewSet(ModelViewSet):
     serializer_class = MainSerializer
 
 
-@extend_schema(
-    tags=["Advise"],
-    summary="Retrieve all Advises as separate dictionary responses",
-    responses=AdviseSerializer,  # Define single object schema
-)
-class AdviseViewSet(ModelViewSet):
-    queryset = Advise.objects.all()
-    serializer_class = AdviseSerializer
-
-
-@extend_schema(
-    tags=["MainText"],
-    summary="MainText",
-    responses= MainTextSerializer,
-)
-class MainTextViewSet(ModelViewSet):
-    queryset = MainText.objects.all()
-    serializer_class = MainTextSerializer
 
 
 @extend_schema(

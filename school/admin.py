@@ -8,8 +8,6 @@ from school.models import (
     DiscountItem,
     Contact,
     Main,
-    MainText,
-    Advise,
     News
 
 )
@@ -23,6 +21,4 @@ admin.site.register(SocialActivity)
 admin.site.register(DiscountItem)
 admin.site.register(Contact)
 admin.site.register(Main)
-admin.site.register(MainText)
-admin.site.register(Advise)
 admin.site.register(News)

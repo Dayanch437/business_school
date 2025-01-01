@@ -44,7 +44,6 @@ class Course(BaseImageModel):
         return self.name
 
 
-
 class Videos(BaseImageModel):
     title = models.CharField(max_length=200)
     video = models.FileField(upload_to='videos/',validators=[validate_video_extension])
@@ -69,8 +68,6 @@ class SocialActivity(models.Model):
 class ActivityImage(BaseImageModel):
     social_activity = models.ForeignKey(SocialActivity, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='social_activity_images/')
-
-
     def __str__(self):
         return f"Image for {self.social_activity.name}"
 
@@ -80,7 +77,6 @@ class DiscountItem(BaseImageModel):
     description = models.CharField(max_length=255)
     image = models.ImageField(upload_to='discounts/')
     percentage = models.CharField(max_length=50)
-
     class Meta:
         verbose_name = 'discount item'
         verbose_name_plural = 'discount items'
@@ -88,8 +84,6 @@ class DiscountItem(BaseImageModel):
 
     def __str__(self):
         return f"{self.description}"
-
-
 
 
 class Contact(models.Model):
@@ -117,41 +111,16 @@ class Main(BaseImageModel):
         verbose_name = 'main'
         verbose_name_plural = 'main'
         db_table = 'main'
-
-
     def __str__(self):
         return self.title
 
 
-class MainText(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    class Meta:
-        db_table = 'text'
-        verbose_name = 'text'
-        verbose_name_plural = 'texts'
-
-
-class Advise(BaseImageModel):
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    image = models.ImageField(upload_to='advise_images/')
-    leftside =  ForeignKey('MainText', on_delete=models.SET_NULL, null=True,related_name='leftside')
-    rightside = ForeignKey('MainText', on_delete=models.SET_NULL, null=True,related_name='rightside')
-    class Meta:
-        verbose_name = 'advise'
-        verbose_name_plural = 'advises'
-        db_table = 'advise'
-
-    def __str__(self):
-       return self.title
 
 
 class News(BaseImageModel):
     title = models.CharField(max_length=400)
     description = models.TextField()
     date = models.DateField()
-
     class Meta:
         verbose_name = 'news'
         verbose_name_plural = 'news'

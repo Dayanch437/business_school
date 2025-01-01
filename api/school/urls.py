@@ -8,7 +8,6 @@ from .viewsets import (
     SocialActivityViewSet,
     DiscountItemViewSet,
     ContactViewSet,
-    AdviseViewSet,
     MainViewSet,
     NewsViewSet
 )
@@ -26,6 +25,5 @@ router.register('discount_item', DiscountItemViewSet)
 router.register('contacts', ContactViewSet)
 router.register('news', NewsViewSet)
 router.register('main', MainViewSet,basename='main')
-router.register('advise', AdviseViewSet,basename='advise')
 
 urlpatterns += router.urls
