@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models import ForeignKey
 from util.utils import BaseImageModel
 from util.validator import validate_video_extension,validate_email
 
