@@ -209,34 +209,46 @@ class SocialActivity(models.Model):
         verbose_name_plural = 'social activities'
         db_table = 'socialActivity'
 
+#
+# class BigCart(models.Model):
+#     social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
+#     image = models.ManyToManyField(to=CartImage,related_name='bigCart')
+#     title = models.CharField(max_length=200)
+#     description = models.TextField()
+#     date = models.DateTimeField(auto_now_add=True)
+#     class Meta:
+#         verbose_name = 'Big cart'
+#         verbose_name_plural = 'Big carts'
+#         db_table = 'bigCart'
+#     def __str__(self):
+#         return self.title
+#
+# class SmallCart(models.Model):
+#     social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
+#     image = models.ManyToManyField(to=CartImage,related_name='smallCart')
+#     title = models.CharField(max_length=200)
+#     description = models.TextField()
+#     date = models.DateTimeField(auto_now_add=True)
+#     class Meta:
+#         verbose_name = 'Small cart'
+#         verbose_name_plural = 'Small carts'
+#         db_table = 'smallCart'
+#     def __str__(self):
+#         return self.title
 
 class BigCart(models.Model):
-    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
-    image = models.ManyToManyField(to=CartImage,related_name='bigCart')
+    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE, related_name='big_carts')
+    image = models.ManyToManyField(CartImage, related_name='big_cart')
     title = models.CharField(max_length=200)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        verbose_name = 'Big cart'
-        verbose_name_plural = 'Big carts'
-        db_table = 'bigCart'
-    def __str__(self):
-        return self.title
 
 class SmallCart(models.Model):
-    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
-    image = models.ManyToManyField(to=CartImage,related_name='smallCart')
+    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE, related_name='small_carts')
+    image = models.ManyToManyField(CartImage, related_name='small_cart')
     title = models.CharField(max_length=200)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        verbose_name = 'Small cart'
-        verbose_name_plural = 'Small carts'
-        db_table = 'smallCart'
-    def __str__(self):
-        return self.title
-
-
 
 class DiscountItem(models.Model):
     description = models.CharField(max_length=255)

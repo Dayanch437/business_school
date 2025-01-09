@@ -194,6 +194,7 @@ class NewsViewSet(ModelViewSet):
     summary="SocialActivity",
     responses= SocialActivitySerializer,
 )
+
 class SocialActivityViewSet(ModelViewSet):
     queryset = SocialActivity.objects.all()
     serializer_class = SocialActivitySerializer

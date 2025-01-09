@@ -18,7 +18,9 @@ from school.models import (
     Main,
     News,
     Image,
-    Content
+    Content,
+    CartImage
+
 )
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -116,29 +118,55 @@ class NewsSerializer(serializers.ModelSerializer):
         fields = ['id','title','image','description','date']
 
 
+# class SmallCartSerializer(serializers.ModelSerializer):
+#     images = serializers.SerializerMethodField()
+#     def get_images(self, instance) -> list:
+#         return [image.image.url for image in instance.images.all()]
+#     class Meta:
+#         model = SmallCart
+#         fields = ['images','title','description','date']
+#
+#
+# class BigCartSerializer(serializers.ModelSerializer):
+#     images = serializers.SerializerMethodField()
+#     def get_images(self, instance) -> list:
+#         return [image.url for image in instance.images.all()]
+#     class Meta:
+#         model = BigCart
+#         fields = ['images','title','description','date']
+#
+# class SocialActivitySerializer(serializers.ModelSerializer):
+#     bigCart = BigCartSerializer()
+#     smallCart = SmallCartSerializer()
+#     class Meta:
+#         model = SocialActivity
+#         fields = ['bigCart','smallCart']
 class SmallCartSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
+
     def get_images(self, instance) -> list:
-        return [image.image.url for image in instance.images.all()]
+        return [image.image.url for image in instance.image.all()]
+
     class Meta:
         model = SmallCart
-        fields = ['images','title','description','date']
-
-
-
+        fields = ['images', 'title', 'description', 'date']
 
 
 class BigCartSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
+
     def get_images(self, instance) -> list:
-        return [image.url for image in instance.images.all()]
+        return [image.image.url for image in instance.image.all()]
+
     class Meta:
         model = BigCart
-        fields = ['images','title','description','date']
+        fields = ['images', 'title', 'description', 'date']
+
 
 class SocialActivitySerializer(serializers.ModelSerializer):
-    bigCart = BigCartSerializer()
-    smallCart = SmallCartSerializer()
+    big_carts = BigCartSerializer(many=True)  # Use `related_name`
+    small_carts = SmallCartSerializer(many=True)  # Use `related_name`
+
     class Meta:
         model = SocialActivity
-        fields = ['bigCart','smallCart']
+        fields = ['big_carts', 'small_carts']
