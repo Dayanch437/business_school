@@ -8,8 +8,7 @@ from .models import (
     DiscountItem,
     Contact,
     Main,
-    MainText,
-    Advise
+
 )
 
 

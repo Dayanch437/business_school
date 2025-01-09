@@ -106,10 +106,9 @@ class ContactVerificationSerializer(serializers.Serializer):
 
 class MainSerializer(serializers.ModelSerializer):
     images = ImageSerializer(many=True)
-    content = ContentSerializer()
     class Meta:
         model = Main
-        fields = ['content','images']
+        fields = ['title','description','images']
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -125,6 +124,10 @@ class SmallCartSerializer(serializers.ModelSerializer):
         model = SmallCart
         fields = ['images','title','description','date']
 
+
+
+
+
 class BigCartSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
     def get_images(self, instance) -> list:
@@ -135,7 +138,6 @@ class BigCartSerializer(serializers.ModelSerializer):
 
 class SocialActivitySerializer(serializers.ModelSerializer):
     bigCart = BigCartSerializer()
-
     smallCart = SmallCartSerializer()
     class Meta:
         model = SocialActivity

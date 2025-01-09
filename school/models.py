@@ -197,13 +197,21 @@ def update_image_on_change_banner(sender,instance,*args,**kwargs):
 
 
 class CartImage(models.Model):
-
     image = CompressedImageField(upload_to='cartImages/',null=True,blank=True)
     def __str__(self):
         return self.image.name
 
 
+class SocialActivity(models.Model):
+
+    class Meta:
+        verbose_name = 'social activity'
+        verbose_name_plural = 'social activities'
+        db_table = 'socialActivity'
+
+
 class BigCart(models.Model):
+    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
     image = models.ManyToManyField(to=CartImage,related_name='bigCart')
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -216,6 +224,7 @@ class BigCart(models.Model):
         return self.title
 
 class SmallCart(models.Model):
+    social_activity = models.ForeignKey(SocialActivity, on_delete=models.CASCADE)
     image = models.ManyToManyField(to=CartImage,related_name='smallCart')
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -227,15 +236,6 @@ class SmallCart(models.Model):
     def __str__(self):
         return self.title
 
-class SocialActivity(models.Model):
-    bigCart =models.ForeignKey(to=BigCart,on_delete=models.CASCADE)
-    smallCart =models.ForeignKey(to=SmallCart,on_delete=models.CASCADE)
-    class Meta:
-        verbose_name = 'social activity'
-        verbose_name_plural = 'social activities'
-        db_table = 'socialActivity'
-    def __str__(self):
-        return f"{self.bigCart.title} - {self.smallCart.title}"
 
 
 class DiscountItem(models.Model):
@@ -301,7 +301,8 @@ def update_image_on_change_banner(sender,instance,*args,**kwargs):
 
 
 class Main(models.Model):
-    content = models.ForeignKey(to=Content, related_name='main_content', on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
     images =models.ManyToManyField(to=Image, related_name='images')
     class Meta:
         verbose_name = 'main'
