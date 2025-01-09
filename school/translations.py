@@ -40,11 +40,4 @@ class MainTranslationOptions(TranslationOptions):
     fields = ['title','description']
 translator.register(Main,MainTranslationOptions)
 
-class MainTextTranslationOptions(TranslationOptions):
-    fields = ['title','description']
-translator.register(MainText,MainTextTranslationOptions)
-
-class AdviseTranslationOptions(TranslationOptions):
-    fields = ['title','description','imagecenter','leftside','rightside']
-translator.register(Advise,AdviseTranslationOptions)
 

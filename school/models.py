@@ -309,7 +309,7 @@ class Main(models.Model):
         verbose_name_plural = 'main'
         db_table = 'main'
     def __str__(self):
-        return self.content.title
+        return self.title
 
 
 
