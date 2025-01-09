@@ -24,7 +24,7 @@ from school.models import (
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
-        fields = 'image'
+        fields = ['image']
 
 class ContentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -41,7 +41,6 @@ class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = ['id','name','surname','description','image','major']
-
 
 
 
@@ -106,9 +105,7 @@ class ContactVerificationSerializer(serializers.Serializer):
 
 
 class MainSerializer(serializers.ModelSerializer):
-    images = serializers.SerializerMethodField()
-    def get_images(self, instance) -> list:
-        return [image.image.url for image in instance.images.all()]
+    images = ImageSerializer(many=True)
     content = ContentSerializer()
     class Meta:
         model = Main
@@ -121,17 +118,24 @@ class NewsSerializer(serializers.ModelSerializer):
 
 
 class SmallCartSerializer(serializers.ModelSerializer):
+    images = serializers.SerializerMethodField()
+    def get_images(self, instance) -> list:
+        return [image.image.url for image in instance.images.all()]
     class Meta:
         model = SmallCart
-        fields = ['image','title','description','date']
+        fields = ['images','title','description','date']
 
 class BigCartSerializer(serializers.ModelSerializer):
+    images = serializers.SerializerMethodField()
+    def get_images(self, instance) -> list:
+        return [image.url for image in instance.images.all()]
     class Meta:
         model = BigCart
-        fields = ['image','title','description','date']
+        fields = ['images','title','description','date']
 
 class SocialActivitySerializer(serializers.ModelSerializer):
     bigCart = BigCartSerializer()
+
     smallCart = SmallCartSerializer()
     class Meta:
         model = SocialActivity

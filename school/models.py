@@ -53,39 +53,6 @@ class Content(models.Model):
     def __str__(self):
         return self.title
 
-class Image(models.Model):
-    image = CompressedImageField(upload_to='images/')
-
-    class Meta:
-        verbose_name = 'image'
-        verbose_name_plural = 'images'
-
-    def __str__(self):
-        return self.image.name
-
-@receiver(pre_delete,sender=Image)
-def auto_delete_file_on_change_activity_image(sender,instance,*args,**kwargs):
-    if instance.image:
-        image_path = instance.image.path
-        if os.path.exists(image_path):
-            os.remove(image_path)
-        else:
-            print ("no path fount")
-
-
-@receiver(pre_save,sender=Image)
-def update_image_on_change_banner(sender,instance,*args,**kwargs):
-    if not instance.pk:
-        return False
-    try:
-        old_image = Image.objects.get(pk=instance.pk).image
-    except Image.DoesNotExist:
-        return False
-    new_image = instance.image
-    if not old_image == new_image:
-        if os.path.isfile(old_image.path):
-            os.remove(old_image.path)
-
 
 class Teacher(models.Model):
     name = models.CharField(max_length=200)
@@ -230,6 +197,7 @@ def update_image_on_change_banner(sender,instance,*args,**kwargs):
 
 
 class CartImage(models.Model):
+
     image = CompressedImageField(upload_to='cartImages/',null=True,blank=True)
     def __str__(self):
         return self.image.name
@@ -297,6 +265,39 @@ class Contact(models.Model):
         verbose_name_plural = 'contacts'
         db_table = 'contact'
 
+
+class Image(models.Model):
+    image = CompressedImageField(upload_to='images/')
+
+    class Meta:
+        verbose_name = 'image'
+        verbose_name_plural = 'images'
+
+    def __str__(self):
+        return self.image.name
+
+@receiver(pre_delete,sender=Image)
+def auto_delete_file_on_change_activity_image(sender,instance,*args,**kwargs):
+    if instance.image:
+        image_path = instance.image.path
+        if os.path.exists(image_path):
+            os.remove(image_path)
+        else:
+            print ("no path fount")
+
+
+@receiver(pre_save,sender=Image)
+def update_image_on_change_banner(sender,instance,*args,**kwargs):
+    if not instance.pk:
+        return False
+    try:
+        old_image = Image.objects.get(pk=instance.pk).image
+    except Image.DoesNotExist:
+        return False
+    new_image = instance.image
+    if not old_image == new_image:
+        if os.path.isfile(old_image.path):
+            os.remove(old_image.path)
 
 
 class Main(models.Model):
