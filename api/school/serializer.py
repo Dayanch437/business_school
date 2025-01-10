@@ -106,10 +106,9 @@ class ContactVerificationSerializer(serializers.Serializer):
 
 
 class MainSerializer(serializers.ModelSerializer):
-    images = ImageSerializer(many=True)
     class Meta:
         model = Main
-        fields = ['title','description','images']
+        fields = ['title','description']
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:

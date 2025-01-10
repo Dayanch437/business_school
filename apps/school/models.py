@@ -253,7 +253,6 @@ def update_image_on_change_banner(sender,instance,*args,**kwargs):
 class Main(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    images =models.ManyToManyField(to=Image, related_name='images')
     class Meta:
         verbose_name = 'main'
         verbose_name_plural = 'main'

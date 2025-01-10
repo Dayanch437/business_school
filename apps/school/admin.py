@@ -18,8 +18,8 @@ from apps.school.models import (
 
 from apps.news.models import News
 from apps.banner.models import Banner
-
 admin.site.register(CartImage)
+
 
 class SmallCartInline(admin.TabularInline):
     model = SmallCart  # Use the SmallCart model
