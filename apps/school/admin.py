@@ -43,8 +43,4 @@ admin.site.register(Contact)
 admin.site.register(News)
 admin.site.register(Image)
 admin.site.register(Content)
-
-@admin.register(Main)
-class MainAdmin(admin.ModelAdmin):
-    model = Main
-    fields = ['images', 'title','description']
+admin.site.register(Main)

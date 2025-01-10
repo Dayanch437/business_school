@@ -98,7 +98,7 @@ def update_image_on_change_banner(sender,instance,*args,**kwargs):
 
 class Videos(models.Model):
     title = models.CharField(max_length=200)
-    video = models.FileField(upload_to='videos/webm/',null=True,blank=True,validators=[validate_video_extension])
+    video = models.FileField(upload_to='videos/webm/',null=True,blank=False,validators=[validate_video_extension])
     image = CompressedImageField(upload_to='videos/')
     class Meta:
         verbose_name = 'video'
