@@ -9,7 +9,6 @@ import uuid
 from django.core.files.uploadedfile import TemporaryUploadedFile
 
 
-
 def upload_file(instance: TemporaryUploadedFile, filename: str) -> str:
     path = type(instance).__name__.lower()
 

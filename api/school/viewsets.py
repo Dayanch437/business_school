@@ -4,21 +4,20 @@ from rest_framework.viewsets import  ModelViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import status
-from rest_framework.renderers import JSONRenderer
 
 
 
-from school.models import (
-    Banner,
+from apps.school.models import (
     Teacher,
     Course,
     DiscountItem,
     Videos,
     Contact,
     Main,
-    News,
     SocialActivity
 )
+from apps.news.models import News
+from apps.banner.models import Banner
 
 
 from .serializer import (
@@ -194,7 +193,6 @@ class NewsViewSet(ModelViewSet):
     summary="SocialActivity",
     responses= SocialActivitySerializer,
 )
-
 class SocialActivityViewSet(ModelViewSet):
     queryset = SocialActivity.objects.all()
     serializer_class = SocialActivitySerializer
