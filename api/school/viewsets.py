@@ -7,18 +7,15 @@ from rest_framework import status
 
 
 
-from apps.school.models import (
-    Teacher,
-    Course,
-    DiscountItem,
-    Videos,
-    Contact,
-    Main,
-    SocialActivity
-)
+from apps.school.models import Main
+from apps.course.models import Course
+from apps.socialactivity.models import SocialActivity
+from apps.teacher.models import Teacher
 from apps.news.models import News
 from apps.banner.models import Banner
-
+from apps.contact.models import Contact
+from apps.video.models import Videos
+from apps.discount.models import DiscountItem
 
 from .serializer import (
     BannerSerializer,
@@ -29,8 +26,8 @@ from .serializer import (
     ContactSerializer,
     ContactVerificationSerializer,
     MainSerializer,
-    NewsSerializer, SocialActivitySerializer
-
+    NewsSerializer,
+    SocialActivitySerializer
 )
 
 

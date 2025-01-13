@@ -9,7 +9,7 @@ from .viewsets import (
     ContactViewSet,
     MainViewSet,
     NewsViewSet,
-    SocialActivityViewSet
+    SocialActivityViewSet,
 )
 
 

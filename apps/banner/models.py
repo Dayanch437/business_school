@@ -1,14 +1,16 @@
+import os
+
 from django.db import models
 from django.db.models.signals import pre_delete, pre_save
 from django.dispatch import receiver
 from util.utils import CompressedImageField
-import os
+
 # Create your models here.
 
 
 
 class Banner(models.Model):
-    image =CompressedImageField(upload_to="banner/", null=True,blank=True)
+    image = CompressedImageField(upload_to="banner/", null=True, blank=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
     class Meta:

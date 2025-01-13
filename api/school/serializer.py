@@ -6,31 +6,18 @@ from django.core.mail import send_mail
 from datetime import datetime
 from django.template.loader import render_to_string
 
-from apps.school.models import (
-    Teacher,
-    Course,
-    Videos,
-    SocialActivity,
-    SmallCart,
-    DiscountItem,
-    Main,
-    Image,
-    Content,
-)
 
-
+from apps.school.models import  Main
+from apps.socialactivity.models import SocialActivity,CartImage,SmallCart
+from apps.course.models import Course
+from apps.video.models import Videos
+from apps.teacher.models import Teacher
 from apps.news.models import News
 from apps.banner.models import Banner
+from apps.discount.models import DiscountItem
 
-class ImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Image
-        fields = ['image']
 
-class ContentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Content
-        fields = ['title','description']
+
 
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
