@@ -4,4 +4,4 @@ from .models import Banner
 
 @register(Banner)
 class BannerTranslationOptions(TranslationOptions):
-    fields = ("title","description")
+    fields = ("description",)

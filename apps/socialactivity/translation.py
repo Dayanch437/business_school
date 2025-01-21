@@ -1,10 +1,9 @@
-from modeltranslation.translator import translator, TranslationOptions,register
-from .models import SmallCart
+from modeltranslation.translator import TranslationOptions,register
+
+from apps.socialactivity.models import SocialActivity
 
 
 
-
-@register(SmallCart)
-class SmallCartTranslationOptions(TranslationOptions):
-    fields = ['title','description']
-
+@register(SocialActivity)
+class SocialActivityTranslationOptions(TranslationOptions):
+    fields = ('title', 'description')

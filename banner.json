@@ -1,0 +1,68 @@
+[
+  {
+    "image": "business_expansion.jpg",
+    "title": "Global Expansion of E-Commerce",
+    "title_tk": "Halkara E-Commerce giňeldilmegi",
+    "title_en": "Global Expansion of E-Commerce",
+    "title_ru": "Глобальное расширение электронной коммерции",
+    "description": "E-commerce businesses are expanding their reach globally with advanced digital marketing strategies.",
+    "description_tk": "E-commerce işewürleri öňdebaryjy sanly marketing strategiýalary bilen dünýä boýunça öz täsirini giňeldýär.",
+    "description_en": "E-commerce businesses are expanding their reach globally with advanced digital marketing strategies.",
+    "description_ru": "Бизнесы электронной коммерции расширяют своё присутствие по всему миру с помощью передовых стратегий цифрового маркетинга."
+  },
+  {
+    "image": "fintech_innovation.jpg",
+    "title": "Innovation in FinTech Industry",
+    "title_tk": "FinTech senagatynda innowasiýa",
+    "title_en": "Innovation in FinTech Industry",
+    "title_ru": "Инновации в индустрии финансовых технологий",
+    "description": "FinTech companies are revolutionizing the financial sector by introducing blockchain and AI-driven solutions.",
+    "description_tk": "FinTech kompaniýalary blokçeyn we AI bilen dolandyrylýan çözgütler bilen maliýe pudagyny inwertiýa edýärler.",
+    "description_en": "FinTech companies are revolutionizing the financial sector by introducing blockchain and AI-driven solutions.",
+    "description_ru": "Компании в области финансовых технологий революционизируют финансовый сектор, внедряя блокчейн и решения на основе искусственного интеллекта."
+  },
+  {
+    "image": "sustainability_trends.jpg",
+    "title": "Corporate Sustainability Trends",
+    "title_tk": "Korporatiw durnuklylyk täzelikleri",
+    "title_en": "Corporate Sustainability Trends",
+    "title_ru": "Тенденции корпоративной устойчивости",
+    "description": "Businesses are prioritizing sustainability with eco-friendly initiatives and responsible sourcing practices.",
+    "description_tk": "Işewürler ekologik taýdan arassa çäreler we jogapkärli serişdeleri almagy bilen durnuklylygy ileri tutýarlar.",
+    "description_en": "Businesses are prioritizing sustainability with eco-friendly initiatives and responsible sourcing practices.",
+    "description_ru": "Компании делают устойчивость приоритетом с экологически чистыми инициативами и ответственными практиками закупок."
+  },
+  {
+    "image": "remote_work_culture.jpg",
+    "title": "Rise of Remote Work Culture",
+    "title_tk": "Remote iş medeniýetiniň ösmegi",
+    "title_en": "Rise of Remote Work Culture",
+    "title_ru": "Рост культуры удаленной работы",
+    "description": "The shift to remote work is reshaping business operations and employee management worldwide.",
+    "description_tk": "Remote işe geçiş, işewürlik amallaryny we işgärleri dolandyrmakdaky usullary dünýädäki täze ýagdaýa geçirmekde.",
+    "description_en": "The shift to remote work is reshaping business operations and employee management worldwide.",
+    "description_ru": "Переход на удаленную работу изменяет бизнес-операции и управление персоналом по всему миру."
+  },
+  {
+    "image": "ai_impact_on_business.jpg",
+    "title": "Impact of Artificial Intelligence on Business",
+    "title_tk": "Ýaýylyş tehnologiýasyyň işewürlikdäki täsiri",
+    "title_en": "Impact of Artificial Intelligence on Business",
+    "title_ru": "Влияние искусственного интеллекта на бизнес",
+    "description": "AI is transforming industries by automating processes and enhancing decision-making capabilities in businesses.",
+    "description_tk": "AI, pudaklary awtomatlaşdyrmak we işewürlikde karar bermek ukyplaryny güýçlendirmek arkaly üýtgedýär.",
+    "description_en": "AI is transforming industries by automating processes and enhancing decision-making capabilities in businesses.",
+    "description_ru": "ИИ преобразует отрасли, автоматизируя процессы и улучшая способности принятия решений в бизнесе."
+  },
+  {
+    "image": "digital_marketing_future.jpg",
+    "title": "The Future of Digital Marketing",
+    "title_tk": "Sanly marketingiň geljegi",
+    "title_en": "The Future of Digital Marketing",
+    "title_ru": "Будущее цифрового маркетинга",
+    "description": "Digital marketing strategies are evolving with new technologies like AI and data analytics to enhance customer engagement.",
+    "description_tk": "Sanly marketing strategiýalary, AI we maglumat analitigi ýaly täze tehnologiýalar bilen müşderi gatnaşygyny güýçlendirmek üçin özgerýär.",
+    "description_en": "Digital marketing strategies are evolving with new technologies like AI and data analytics to enhance customer engagement.",
+    "description_ru": "Стратегии цифрового маркетинга развиваются с новыми технологиями, такими как ИИ и аналитика данных, чтобы повысить вовлеченность клиентов."
+  }
+]

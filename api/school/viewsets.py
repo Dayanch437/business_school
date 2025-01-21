@@ -9,7 +9,7 @@ from rest_framework import status
 
 from apps.school.models import Main
 from apps.course.models import Course
-from apps.socialactivity.models import SocialActivity
+from apps.socialactivity.models import SocialActivity,Image
 from apps.teacher.models import Teacher
 from apps.news.models import News
 from apps.banner.models import Banner
@@ -27,7 +27,8 @@ from .serializer import (
     ContactVerificationSerializer,
     MainSerializer,
     NewsSerializer,
-    SocialActivitySerializer
+    SocialActivitySerializer,
+    ImageSerializer
 )
 
 
@@ -185,12 +186,18 @@ class NewsViewSet(ModelViewSet):
     serializer_class = NewsSerializer
 
 
+
+
+
+
+
+
 @extend_schema(
     tags=["SocialActivity"],
     summary="SocialActivity",
     responses= SocialActivitySerializer,
 )
 class SocialActivityViewSet(ModelViewSet):
-    queryset = SocialActivity.objects.all()
+    queryset = SocialActivity.objects.all().prefetch_related('images')
     serializer_class = SocialActivitySerializer
     http_method_names = ['get']

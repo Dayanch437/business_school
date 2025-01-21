@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -10,5 +9,4 @@ class DiscountItem(models.Model):
         verbose_name = 'discount item'
         verbose_name_plural = 'discount items'
     def __str__(self):
-        return f"{self.description}"
-
+        return self.description

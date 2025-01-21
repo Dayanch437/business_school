@@ -8,13 +8,36 @@ from django.template.loader import render_to_string
 
 
 from apps.school.models import  Main
-from apps.socialactivity.models import SocialActivity,CartImage,SmallCart
+from apps.socialactivity.models import SocialActivity,Image
 from apps.course.models import Course
 from apps.video.models import Videos
 from apps.teacher.models import Teacher
 from apps.news.models import News
 from apps.banner.models import Banner
 from apps.discount.models import DiscountItem
+
+
+
+
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ['image']
+
+class SocialActivitySerializer(serializers.ModelSerializer):
+    images = ImageSerializer(many=True)
+    class Meta:
+        model = SocialActivity
+        fields = ['title','description','date','images']
+
+
+
+
+
+
+
+
 
 
 
@@ -103,21 +126,3 @@ class NewsSerializer(serializers.ModelSerializer):
         fields = ['id','title','image','description','date']
 
 
-class SmallCartSerializer(serializers.ModelSerializer):
-    images = serializers.SerializerMethodField()
-
-    def get_images(self, instance) -> list:
-        return [image.image.url for image in instance.image.all()]
-
-    class Meta:
-        model = SmallCart
-        fields = ['images', 'title', 'description', 'date']
-
-
-
-class SocialActivitySerializer(serializers.ModelSerializer):
-    small_carts = SmallCartSerializer(many=True)  # Use `related_name`
-
-    class Meta:
-        model = SocialActivity
-        fields = ['small_carts']

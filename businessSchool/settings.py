@@ -93,6 +93,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = "businessSchool.wsgi.application"
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = ["*"]

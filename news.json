@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Tech Innovations 2025",
+        "title_tk": "2025-nji ýylyň Tehnologiýa Täzelikleri",
+        "title_en": "Tech Innovations 2025",
+        "title_ru": "Технологические инновации 2025",
+        "description": "A look into groundbreaking technologies shaping the future.",
+        "description_tk": "Geljegi şekillendirýän täzelikçi tehnologiýalaryň syny.",
+        "description_en": "A look into groundbreaking technologies shaping the future.",
+        "description_ru": "Обзор новаторских технологий, формирующих будущее.",
+        "date": "2025-01-15",
+        "image": "tech-innovations.webp"
+    },
+    {
+        "title": "Climate Action Summit",
+        "title_tk": "Howanyň Üýtgemegine Bagyşlanan Sammit",
+        "title_en": "Climate Action Summit",
+        "title_ru": "Саммит по действиям в отношении климата",
+        "description": "Global leaders convene to tackle climate change.",
+        "description_tk": "Howanyň üýtgemegine garşy göreşmek üçin global liderleriň ýygnagy.",
+        "description_en": "Global leaders convene to tackle climate change.",
+        "description_ru": "Мировые лидеры собираются для борьбы с изменением климата.",
+        "date": "2025-01-20",
+        "image": "climate-summit.webp"
+    },
+    {
+        "title": "New Discoveries in Space",
+        "title_tk": "Kosmosda Täze Açyşlar",
+        "title_en": "New Discoveries in Space",
+        "title_ru": "Новые открытия в космосе",
+        "description": "Scientists uncover mysterious signals from distant galaxies.",
+        "description_tk": "Alimler uzak galaktikalardan syrly signal tapdylar.",
+        "description_en": "Scientists uncover mysterious signals from distant galaxies.",
+        "description_ru": "Ученые обнаружили загадочные сигналы из далеких галактик.",
+        "date": "2025-01-18",
+        "image": "space-discoveries.webp"
+    },
+    {
+        "title": "Global Economy Trends",
+        "title_tk": "Global Ykdysadyýet Tendentleri",
+        "title_en": "Global Economy Trends",
+        "title_ru": "Тенденции глобальной экономики",
+        "description": "An analysis of market trends and economic forecasts for 2025.",
+        "description_tk": "2025-nji ýyl üçin bazar tendensiýalarynyň we ykdysady proýnozlaryň seljerilmesi.",
+        "description_en": "An analysis of market trends and economic forecasts for 2025.",
+        "description_ru": "Анализ рыночных тенденций и экономических прогнозов на 2025 год.",
+        "date": "2025-01-19",
+        "image": "economy-trends.webp"
+    },
+    {
+        "title": "Breakthrough in Medical Science",
+        "title_tk": "Lukmançylyk Ylymda Öwrülişik",
+        "title_en": "Breakthrough in Medical Science",
+        "title_ru": "Прорыв в медицинской науке",
+        "description": "A new treatment promises to revolutionize healthcare.",
+        "description_tk": "Täze bejergi saglygy goraýyş ulgamyny özgertmäge wada berýär.",
+        "description_en": "A new treatment promises to revolutionize healthcare.",
+        "description_ru": "Новое лечение обещает революционизировать здравоохранение.",
+        "date": "2025-01-17",
+        "image": "medical-breakthrough.webp"
+    }
+]
