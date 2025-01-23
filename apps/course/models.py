@@ -6,7 +6,7 @@ import os
 
 class Course(models.Model):
     name = models.CharField(max_length=200)
-    image = CompressedImageField(upload_to='course/', null=True, blank=True)
+    image = models.ImageField(upload_to='course/', null=True, blank=True)
     description = models.TextField()
     duration = models.CharField(max_length=200)
     price = models.FloatField()
@@ -16,3 +16,4 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+

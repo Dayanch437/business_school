@@ -4,34 +4,34 @@
     "description_tk": "Önümçilik strategiýasy boýunça öňdebaryjy kursa ýazylanyňyzda ýazylma tölegi boýunça 25% arzanladyş alyň. Bu aýratyn teklibi gözden kaçyryň!",
     "description_en": "Sign up for our Advanced Marketing Strategy course and save 25% on your registration. Don't miss this exclusive deal!",
     "description_ru": "Запишитесь на курс по стратегическому маркетингу и получите скидку 25% на регистрационный сбор. Не упустите это эксклюзивное предложение!",
-    "percentage": 25
+    "percentage": "25%"
   },
   {
     "description": "Enroll in our Entrepreneurship and Innovation course and enjoy a 30% discount. Perfect for aspiring business leaders!",
     "description_tk": "Önümsöwçülik we innowasiýa kursuna ýazylanyňyzda 30% arzanladyş alyň. Işgär liderleri üçin ideal kurs!",
     "description_en": "Enroll in our Entrepreneurship and Innovation course and enjoy a 30% discount. Perfect for aspiring business leaders!",
     "description_ru": "Запишитесь на курс по предпринимательству и инновациям и получите скидку 30%. Идеально для будущих бизнес-лидеров!",
-    "percentage": 30
+    "percentage": "30%"
   },
   {
     "description": "Join our Financial Management course and take advantage of a 10% discount. Limited spots available, sign up now!",
     "description_tk": "Maliýe dolandyryş kursuna goşulyp, 10% arzanladyşdan peýdalanyň. Çäkli orunlar bar, häzirkä ýazylanyň!",
     "description_en": "Join our Financial Management course and take advantage of a 10% discount. Limited spots available, sign up now!",
     "description_ru": "Присоединяйтесь к нашему курсу по финансовому управлению и получите скидку 10%. Количество мест ограничено, регистрируйтесь сейчас!",
-    "percentage": 10
+    "percentage": "10%"
   },
   {
     "description": "Take advantage of our 40% discount on the Business Leadership course. Enroll today and start your journey towards becoming a successful leader!",
     "description_tk": "Biznes liderligi kursuna 40% arzanladyşdan peýdalanyň. Häzir ýazylma we üstünlikli lider bolmak üçin ilkinji ädimi atlaň!",
     "description_en": "Take advantage of our 40% discount on the Business Leadership course. Enroll today and start your journey towards becoming a successful leader!",
     "description_ru": "Воспользуйтесь скидкой 40% на курс по бизнес-руководству. Запишитесь сегодня и начните путь к успеху в роли лидера!",
-    "percentage": 40
+    "percentage": "40%"
   },
   {
     "description": "Get a 50% discount on our Digital Marketing course. Learn the latest techniques in marketing and boost your career!",
     "description_tk": "Sanly marketing kursyna 50% arzanladyş alyň. Marketingiň iň täze usullaryny öwrenip, karýeranyňyzy ýokarlandyryň!",
     "description_en": "Get a 50% discount on our Digital Marketing course. Learn the latest techniques in marketing and boost your career!",
     "description_ru": "Получите скидку 50% на наш курс по цифровому маркетингу. Изучите новейшие методы маркетинга и повысите свою карьеру!",
-    "percentage": 50
+    "percentage": "50%"
   }
 ]

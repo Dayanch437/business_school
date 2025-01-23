@@ -4,6 +4,8 @@ from apps.socialactivity.models import SocialActivity
 
 
 
+
+
 @register(SocialActivity)
 class SocialActivityTranslationOptions(TranslationOptions):
     fields = ('title', 'description')

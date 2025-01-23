@@ -3,6 +3,6 @@ from .models import Main
 
 
 @register(Main)
-class MainTranslationOptions(TranslationOptions):
+class MainTranslationOptions(TranslationOptions):v
     fields = ['title','description']
 

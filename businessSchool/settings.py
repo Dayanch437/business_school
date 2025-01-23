@@ -68,6 +68,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -129,14 +130,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-USE_I18N = True
 
-LANGUAGE_CODE = "tk"
+
 LANGUAGES = (
     ("tk", "Turkmen"),
     ("en", "English"),
     ("ru", "Russian")
 )
+
+LANGUAGE_CODE = "tk"
+USE_I18N = True
+
+
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'tk'
 MODELTRANSLATION_FALLBACK_LANGUAGES = ("tk","en","ru")
