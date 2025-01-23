@@ -13,3 +13,5 @@ class Videos(models.Model):
     class Meta:
         verbose_name = 'video'
         verbose_name_plural = 'videos'
+    def __str__(self):
+        return self.title
