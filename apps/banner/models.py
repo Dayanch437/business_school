@@ -9,7 +9,7 @@ from util.utils import CompressedImageField
 
 class Banner(models.Model):
     title = models.CharField(max_length=255)
-    image = CompressedImageField(upload_to="banner/", null=True, blank=True)
+    image = AdvanceThumbnailField(upload_to="banner/", null=True, blank=True)
     description = models.TextField()
     class Meta:
         verbose_name = 'banner'

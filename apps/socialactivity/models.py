@@ -1,8 +1,6 @@
 from django.db import models
-from django.db.models import ManyToManyField, ForeignKey
 
 from util.compressedFields import AdvanceThumbnailField
-from util.utils import CompressedImageField
 
 
 class SocialActivity(models.Model):
@@ -21,7 +19,7 @@ class SocialActivity(models.Model):
 
 
 class Image(models.Model):
-    image = CompressedImageField(upload_to="images/",null=True, blank=True)
+    image = AdvanceThumbnailField(upload_to="images/",null=True, blank=True)
     social_activity = models.ForeignKey(SocialActivity,on_delete=models.CASCADE,related_name='images')
 
     class Meta:

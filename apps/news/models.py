@@ -7,7 +7,7 @@ class News(models.Model):
     title = models.CharField(max_length=400)
     description = models.TextField()
     date = models.DateField(auto_now_add=True)
-    image = CompressedImageField(upload_to="news/", null=True, blank=True)
+    image = AdvanceThumbnailField(upload_to="news/", null=True, blank=True)
     class Meta:
         verbose_name = 'news'
         verbose_name_plural = 'news'

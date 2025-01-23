@@ -103,10 +103,15 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Use os.path.join for compatibility
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'proje_adi',
+        'USER': 'kullanici_adi',
+        'PASSWORD': 'parola123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -173,6 +178,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
 
 
 SPECTACULAR_SETTINGS = {

@@ -131,6 +131,8 @@ class AdvanceThumbnailField(models.ImageField):
         try:
             old_instance = instance.__class__.objects.get(pk=instance.pk)
             old_file = getattr(old_instance, self.name)
+            if not old_file:
+                return False
         except instance.__class__.DoesNotExist:
             return False
         new_file = getattr(instance, self.name)

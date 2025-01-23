@@ -1,17 +1,12 @@
 from django.db import models
 from util.compressedFields import AdvanceThumbnailField
-from util.compressedFields import CompressedVideoField
-
-
-
+from util.validator import validate_video_extension
 
 class Videos(models.Model):
     title = models.CharField(max_length=200)
-    video = CompressedVideoField(
-        upload_to='videos/',
-        allowed_formats=['mp4', 'mov', 'avi'],
-        output_format='mp4',
-        codec='libx264'
+    video = models.FileField(
+        upload_to="videos/",
+        validators=[validate_video_extension],
     )
 
     image = AdvanceThumbnailField(upload_to='videos/image/')

@@ -9,7 +9,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=300)
     surname = models.CharField(max_length=300)
     description = models.TextField()
-    image = CompressedImageField(upload_to="teacher", null=True, blank=True)
+    image = AdvanceThumbnailField(upload_to="teacher", null=True, blank=True)
     major = models.CharField(max_length=400)
     class Meta:
         verbose_name = 'teacher'
