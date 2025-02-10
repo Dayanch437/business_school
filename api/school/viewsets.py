@@ -16,6 +16,8 @@ from apps.banner.models import Banner
 from apps.contact.models import Contact
 from apps.video.models import Videos
 from apps.discount.models import DiscountItem
+from apps.habarlasmak.models import Habarlasmak
+
 
 from .serializer import (
     BannerSerializer,
@@ -28,7 +30,7 @@ from .serializer import (
     MainSerializer,
     NewsSerializer,
     SocialActivitySerializer,
-    ImageSerializer
+    HabarlasmakSerializer
 )
 
 
@@ -201,3 +203,12 @@ class SocialActivityViewSet(ModelViewSet):
     queryset = SocialActivity.objects.all().prefetch_related('images')
     serializer_class = SocialActivitySerializer
     http_method_names = ['get']
+
+
+
+
+
+
+class HabarlasmakViewSet(ModelViewSet):
+    queryset = Habarlasmak.objects.all()
+    serializer_class = HabarlasmakSerializer

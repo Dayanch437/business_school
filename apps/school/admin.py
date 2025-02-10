@@ -12,10 +12,6 @@ from apps.banner.models import Banner
 
 
 
-@admin.register(SocialActivity)
-class SocialActivityAdmin(ImportExportModelAdmin):
-    list_display = ('id',)  # Adjust fields to display for SocialActivity
-admin.site.register(Image)
 admin.site.register(Banner,ImportExportModelAdmin)
 admin.site.register(Teacher,ImportExportModelAdmin)
 admin.site.register(Course,ImportExportModelAdmin)

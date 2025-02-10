@@ -1,10 +1,8 @@
 from django.db.models import FileField
 from django.core.exceptions import ValidationError
 import subprocess
-
 import io
 import os
-
 from django.core.files import File
 from django.db import models
 from PIL import Image, ImageOps
