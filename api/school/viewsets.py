@@ -209,6 +209,11 @@ class SocialActivityViewSet(ModelViewSet):
 
 
 
+@extend_schema(
+    tags=["Habarlasmak"],
+    summary="Habarlasmak",
+    responses= HabarlasmakSerializer,
+)
 class HabarlasmakViewSet(ModelViewSet):
     queryset = Habarlasmak.objects.all()
     serializer_class = HabarlasmakSerializer

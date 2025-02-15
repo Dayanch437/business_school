@@ -10,6 +10,7 @@ from .viewsets import (
     MainViewSet,
     NewsViewSet,
     SocialActivityViewSet,
+    HabarlasmakViewSet
 )
 
 
@@ -25,4 +26,6 @@ router.register('contacts', ContactViewSet)
 router.register('news', NewsViewSet)
 router.register('main', MainViewSet,basename='main')
 router.register('social_activity', SocialActivityViewSet)
+router.register('habarlasmak', HabarlasmakViewSet)
+
 urlpatterns += router.urls
