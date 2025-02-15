@@ -16,7 +16,7 @@ from apps.banner.models import Banner
 from apps.contact.models import Contact
 from apps.video.models import Videos
 from apps.discount.models import DiscountItem
-from apps.habarlasmak.models import Habarlasmak
+from apps.footerdata.models import FooterData
 
 
 from .serializer import (
@@ -30,7 +30,7 @@ from .serializer import (
     MainSerializer,
     NewsSerializer,
     SocialActivitySerializer,
-    HabarlasmakSerializer
+    FooterDataSerializer
 )
 
 
@@ -210,10 +210,10 @@ class SocialActivityViewSet(ModelViewSet):
 
 
 @extend_schema(
-    tags=["Habarlasmak"],
-    summary="Habarlasmak",
-    responses= HabarlasmakSerializer,
+    tags=["footerData"],
+    summary="footerData",
+    responses= FooterDataSerializer,
 )
 class HabarlasmakViewSet(ModelViewSet):
-    queryset = Habarlasmak.objects.all()
-    serializer_class = HabarlasmakSerializer
+    queryset = FooterData.objects.all()
+    serializer_class = FooterDataSerializer

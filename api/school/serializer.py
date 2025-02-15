@@ -15,7 +15,7 @@ from apps.teacher.models import Teacher
 from apps.news.models import News
 from apps.banner.models import Banner
 from apps.discount.models import DiscountItem
-from apps.habarlasmak.models import Habarlasmak
+from apps.footerdata.models import FooterData
 
 
 
@@ -35,9 +35,9 @@ class SocialActivitySerializer(serializers.ModelSerializer):
 
 
 
-class HabarlasmakSerializer(serializers.ModelSerializer):
+class FooterDataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Habarlasmak
+        model = FooterData
         fields = ["gmail","phone","instagram","tiktok"]
 
 

@@ -26,6 +26,6 @@ router.register('contacts', ContactViewSet)
 router.register('news', NewsViewSet)
 router.register('main', MainViewSet,basename='main')
 router.register('social_activity', SocialActivityViewSet)
-router.register('habarlasmak', HabarlasmakViewSet)
+router.register('footerdata', HabarlasmakViewSet)
 
 urlpatterns += router.urls

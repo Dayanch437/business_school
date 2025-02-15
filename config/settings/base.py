@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     "apps.socialactivity",
     "apps.course",
     "apps.discount",
-    "apps.habarlasmak"
+    "apps.footerdata"
 ]
 
 
