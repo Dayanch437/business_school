@@ -59,7 +59,7 @@ class BannerSerializer(serializers.ModelSerializer):
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
-        fields = ['id','name','surname','description','image','major']
+        fields = ['id','name','gender','surname','description','image','major']
 
 
 

@@ -4,9 +4,6 @@ from rest_framework.viewsets import  ModelViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import status
-
-
-
 from apps.school.models import Main
 from apps.course.models import Course
 from apps.socialactivity.models import SocialActivity,Image
@@ -17,6 +14,7 @@ from apps.contact.models import Contact
 from apps.video.models import Videos
 from apps.discount.models import DiscountItem
 from apps.footerdata.models import FooterData
+
 
 
 from .serializer import (
@@ -203,10 +201,6 @@ class SocialActivityViewSet(ModelViewSet):
     queryset = SocialActivity.objects.all().prefetch_related('images')
     serializer_class = SocialActivitySerializer
     http_method_names = ['get']
-
-
-
-
 
 
 @extend_schema(
