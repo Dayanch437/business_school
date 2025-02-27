@@ -17,6 +17,7 @@ from apps.footerdata.models import FooterData
 
 
 
+
 from .serializer import (
     BannerSerializer,
     TeacherSerializer,

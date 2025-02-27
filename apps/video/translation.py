@@ -6,5 +6,3 @@ from .models import Videos
 class VideoTranslationOptions(TranslationOptions):
     fields = ('title',)
 
-
-

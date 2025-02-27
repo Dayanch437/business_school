@@ -33,21 +33,10 @@ class SocialActivitySerializer(serializers.ModelSerializer):
         fields = ['title','description','date','images']
 
 
-
-
 class FooterDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = FooterData
         fields = ["gmail","phone","instagram","tiktok"]
-
-
-
-
-
-
-
-
-
 
 
 class BannerSerializer(serializers.ModelSerializer):
@@ -60,7 +49,6 @@ class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = ['id','name','gender','surname','description','image','major']
-
 
 
 class CourseSerializer(serializers.ModelSerializer):
